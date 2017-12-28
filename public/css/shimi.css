@@ -1,0 +1,913 @@
+@font-face {
+    font-family: 'IranSansBold';
+    src: url('/fonts/iransans/IRANSansBold.eot') format('eot');
+    src: url('/fonts/iransans/IRANSansBold.ttf') format('truetype'), url('/fonts/iransans/IRANSansBold.woff') format('woff'), url('/fonts/iransans/IRANSansBold.eot') format('embedded-opentype'), url('/fonts/iransans/IRANSansBold.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/fonts/iransans/IRANSans.eot') format('eot');
+    src: url('/fonts/iransans/IRANSans.ttf') format('truetype'), url('/fonts/iransans/IRANSans.woff') format('woff'), url('/fonts/iransans/IRANSans.eot') format('embedded-opentype'), url('/fonts/iransans/IRANSans.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IranSansLight';
+    src: url('/fonts/iransans/IRANSansLight.eot') format('eot');
+    src: url('/fonts/iransans/IRANSansLight.ttf') format('truetype'), url('/fonts/iransans/IRANSansLight.woff') format('woff'), url('/fonts/iransans/IRANSansLight.eot') format('embedded-opentype'), url('/fonts/iransans/IRANSansLight.svg') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IranSansUltraLight';
+    src: url('/fonts/iransans/IRANSansUltraLight.eot#iefix');
+    src: url('/fonts/iransans/IRANSansUltraLight.ttf') format('truetype'), url('/fonts/iransans/IRANSansUltraLight.woff') format('woff'), url('/fonts/iransans/IRANSansUltraLight.eot#iefix') format('embedded-opentype'), url('/fonts/iransans/IRANSansUltraLight.svg#IRANSansUltraLight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #62c3d0;
+}
+
+a:hover {
+    color: #2e6971;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    max-width: 100%
+}
+
+.clear {
+    clear: both;
+}
+
+.header {
+    widtH: 100%;
+    height: 420px;
+    position: relative;
+    border-top: 4px solid #62c3d0;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    font: 13px IranSans;
+}
+
+.header ul li {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    border: none;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.header ul li.first_li {
+    display: block;
+}
+
+.header ul li img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+.container {
+    width: 1000px;
+    font: 12px IranSansLight;
+    direction: rtl;
+    text-align: justify;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.min_heighted_container {
+    min-height: 500px;
+}
+
+.black50 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url('/images/black50.png');
+    z-index: -1;
+}
+
+.header .change_lang {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background: #fff;
+    color: #555;
+    height: 26px;
+    padding: 0 12px;
+    text-align: center;
+    border-radius: 3px;
+    displaY: inline-block;
+    font: 11px Arial;
+    line-height: 26px;
+}
+
+.header .change_lang span {
+    width: 18px;
+    height: 100%;
+    background: url(/images/enflag.png) no-repeat center;
+    float: left;
+    margin-right: 4px;
+}
+
+.header .change_lang:hover {
+    background: #dfdfdf;
+}
+
+.header .logo {
+    margin-top: 15px;
+    display: block;
+    widtH: 300px;
+}
+
+.header h1 {
+    font: 26px IranSans;
+}
+
+.header h2 {
+    font: 13px IranSansLight;
+}
+
+.header .buttons {
+    width: 130px;
+    height: 45px;
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    line-height: 45px;
+    border-radius: 3px;
+    margin: 0 3px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.header .button2 {
+    background: #62c3d0;
+    border: none;
+}
+
+.header .button2:hover {
+    background: #2e6971;
+}
+
+.header .button1:hover {
+    border-color: #ccc;
+    color: #ccc;
+}
+
+.header .slogan {
+    background: url('/images/slogan_fa.png') no-repeat center;
+    margin-top: 12px;
+    height: 100px;
+    background-size: 100% auto;
+    width: 220px;
+}
+
+.navigator {
+    width: 100%;
+    height: 40px;
+    background: #4a4a4a;
+}
+
+.navigator ul {
+    list-style-type: none
+}
+
+.navigator ul li {
+    float: right;
+    position: relative;
+}
+
+.navigator ul li a {
+    background: #2e6971;
+    color: #fff;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 1px;
+    padding: 0 20px;
+}
+
+.navigator ul li a:hover, .navigator ul li a.selected {
+    background: #62c3d0;
+}
+
+.navigator ul li ul {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #4a4a4a;
+    width: 230px;
+    display: none;
+    z-index: 5;
+}
+
+.navigator ul li ul li {
+    width: 100%;
+}
+
+.navigator ul li ul li a {
+    width: 100%;
+    height: auto;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 12px;
+    margin-top: 1px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.navigator ul li ul li a img {
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    margin-left: 12px;
+    margin-top: 6px;
+    display: inline-block;
+    float: right;
+}
+
+.sharing {
+    float: left;
+    line-height: 40px;
+    color: #fff;
+    text-align: right;
+}
+
+.sharing a {
+    display: inline-block;
+    background: url(/images/fb.png) no-repeat center;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.sharing a:hover {
+    opacity: 0.7;
+}
+
+.sharing a.gp {
+    background-image: url(/images/gp.png);
+    background-color: #db402c;
+}
+
+.sharing a.tg {
+    background-image: url(/images/tg.png);
+    background-color: #61a8de;
+}
+
+.sharing span {
+    margin-left: 5px;
+}
+
+.sharing a.social_9 {
+    background-image: url('/uploads/682114ig.png')
+}
+
+.sharing a.social_8 {
+    background-image: url('/uploads/191457tg.png')
+}
+
+.first_boxes {
+    widtH: 290px;
+    margin-left: 65px;
+    height: 200px;
+    background: #f5f5f5;
+    float: right;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.last_first_box {
+    margin-left: 0;
+}
+
+.first_boxes .icon {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    background: url(/images/news_icon.png) no-repeat center;
+}
+
+.first_boxes .products_icon {
+    background-image: url(/images/products_icon.png)
+}
+
+.first_boxes .contact_icon {
+    background-image: url(/images/contact_icon.png)
+}
+
+.first_boxes .title {
+    color: #218997;
+    font: 20px IranSans;
+    margin-top: 10px;
+}
+
+.first_boxes a {
+    displaY: block;
+}
+
+.first_boxes a.link_title {
+    color: #555;
+    font: 11px IranSans;
+    margin-top: 5px;
+    height: 24px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.first_boxes a.more {
+    margin-top: 7px;
+    font: 11px IranSansLight;
+}
+
+.first_text {
+    width: 100%;
+    margin-top: 60px;
+    background: url(/images/black50.png), url('/images/first_text.jpg') no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 40px 0;
+    position: relative;
+    background-size: cover;
+    text-align: center;
+}
+
+.first_text .container {
+    text-align: center;
+    font: 1.05em/50px IranSansLight;
+}
+
+.first_text h3 {
+    font: 40px IranSans;
+    line-height: 30px;
+    margin-top: 30px;
+    color: #fff;
+}
+
+#footer {
+    background: #4a4a4a;
+    width: 100%;
+}
+
+#footer .first_boxes {
+    background: none;
+    paddinG: 0;
+    text-align: justify;
+    margin-top: 30px;
+    color: #fff;
+    line-height: 30px;
+}
+
+#footer .first_boxes .title {
+    font: 12px IranSans;
+    width: 70%;
+    text-align: justify;
+    border-bottom: 1px solid #62c3d0;
+    float: right;
+    color: #62c3d0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+#footer .first_boxes a {
+    color: #eee;
+}
+
+#footer .first_boxes a:hover {
+    color: #62c3d0
+}
+
+.anti_align {
+    text-align: left;
+}
+
+.certificates {
+    width: 100%;
+    padding: 15px 0;
+    background: #333;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.certificates a {
+    displaY: inline-block;
+    height: 70px;
+    font: 9px/130px Arial;
+    color: #fff;
+    padding: 0 15px;
+    overflow: hidden;
+    background: url('/images/certificates.png') no-repeat center -60px;
+}
+
+.certificates a:hover {
+    opacity: 0.7;
+}
+
+.certificates a.html5 {
+    background-position: center -120px;
+}
+
+.certificates a.css3 {
+    background-position: center -180px;
+}
+
+.certificates a.gtmetrix {
+    background-position: center 0;
+}
+
+.certificates a.alexa {
+    background-position: center -240px;
+}
+
+.certificates a.laravel {
+    background-position: center -300px;
+}
+
+h3 {
+    font: 25px IranSans;
+    color: #444;
+}
+
+.main_title {
+    margin-top: 60px;
+    text-align: center;
+    height: 45px;
+    background: url(/images/title_line.jpg) repeat-x center;
+}
+
+.main_title h3 {
+    padding: 0 60px;
+    background: #fff;
+    display: inline-block;
+    height: 100%;
+    font: 29px IranSans;
+    line-height: 45px;
+    color: #666;
+}
+
+.text {
+    margin-top: 30px;
+    line-height: 35px;
+    color: #333;
+    text-aligN: justify;
+}
+
+.text img {
+    max-width: 100%;
+}
+
+.clear30 {
+    margin-top: 30px;
+}
+
+.blog_boxes {
+    width: 480px;
+    margin-left: 20px;
+    height: 200px;
+    position: relative;
+    displaY: block;
+    float: right;
+    margin-top: 30px;
+}
+
+.normal_cursor {
+    cursor: default;
+}
+
+.blog_boxes img {
+    float: left;
+    box-sizing: border-box;
+    width: 180px;
+    height: 180px;
+    border: 8px solid #2e6971;
+    border-radius: 180px;
+    font-size: 9px;
+    text-align: center;
+    line-height: 172px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.blog_boxes .readall_black70 {
+    width: 166px;
+    height: 166px;
+    border-radius: 166px;
+    top: 7px;
+    left: 7px;
+    position: absolute;
+    background: url('/images/black70.png');
+    line-height: 166px;
+    text-align: center;
+    color: #fff;;
+    display: none;
+}
+
+.blog_boxes .title {
+    width: 320px;
+    height: 60px;
+    background: #4a4a4a;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    left: 160px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    z-index: -1;
+    padding-right: 15px;
+    padding-left: 35px;
+    line-height: 60px;
+    font-size: 16px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.anti_blog_boxes {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.anti_blog_boxes img {
+    float: right;
+}
+
+.anti_blog_boxes .readall_black70 {
+    left: auto;
+    right: 7px;
+}
+
+.anti_blog_boxes .title {
+    left: auto;
+    right: 160px;
+    padding-right: 35px;
+    padding-left: 15px;
+}
+
+.clear60 {
+    margin-top: 60px;
+}
+
+.rep {
+    width: 100%;
+    height: 280px;
+    background: #fafafa url('/images/rep1.jpg') no-repeat center;
+    background-size: auto 100%;
+    position: relative;
+    margin-bottom: 1px;
+}
+
+.rep_1 {
+    background-image: url("/images/rep1.jpg");
+}
+
+.rep .black60 {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: #000;
+    position: absolute;
+}
+
+.rep .container {
+    position: absolute;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rep img {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    border: 7px solid #62c3d0;
+    float: right;
+    line-height: 150px;
+    text-align: center;
+    color: #aaa;
+}
+
+.rep .rep_icons {
+    float: right;
+    margin-right: 8px;
+}
+
+.rep .rep_icons a {
+    color: #62c3d0;
+    display: block;
+    background: url(/images/rep_icons.png) no-repeat right center;
+    height: 20px;
+    margin: 12px 15px;
+    padding-right: 30px;
+    font: 12px/20px IranSans;
+}
+
+.rep .rep_icons a.title {
+    background: none;
+    font: 22px IranSans;
+    color: #fff;
+    margin-top: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+.rep .rep_icons a.website {
+    background-image: url(/images/website.png);
+}
+
+.rep .rep_icons a.catalog {
+    background-image: url(/images/catalog.png);
+}
+
+.rep .rep_icons a:hover {
+    color: #fff
+}
+
+.rep .more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #62c3d0;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 3px;
+}
+
+.rep .more:hover {
+    background: #2e6971
+}
+
+.center_align {
+    text-align: center
+}
+
+.rep_buttons {
+    display: inline-block;
+    background: #62c3d0;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 0 5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;;
+}
+
+.rep_buttons:hover {
+    background: #2e6971;
+    color: #fff;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.pagination li {
+    display: inline-block;
+    line-height: 30px;
+}
+
+.pagination li a, .pagination li span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.pagination li span {
+    background: #fff;
+    border-color: #f5f5f5;
+}
+
+.pagination a:hover {
+    background: #ccc;
+}
+
+.pagination li.active span {
+    background: #2e6971;
+    color: #fff;
+    border-color: #2e6971;
+}
+
+.pagination .disabled {
+    background: #fafafa;
+    color: #ccc;
+    border-color: #f1f1f1;
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+    margin-top: 60px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #f5f5f5;
+}
+
+.contact_details {
+    margin-top: 60px;
+    float: right;
+    width: 50%;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.contact {
+    float: left;
+    width: 50%;
+    padding-right: 40px;
+    border-right: 1px solid #ddd;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+.contact_title {
+    font: 22px IranSansLight;
+    color: #555;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contact_details .icons {
+    padding-right: 40px;
+    background: url('/images/tel_icon.png') no-repeat right center;
+    min-height: 32px;
+    font: 12px IranSans;
+    line-height: 32px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.contact_details .address {
+    background-image: url('/images/address_icon.png')
+}
+
+.contact_details .mobile {
+    background-image: url('/images/mobile_icon.png')
+}
+
+.contact_details .email {
+    background-image: url('/images/email_icon.png')
+}
+
+.contact form {
+    width: 100%;
+    display: block;
+}
+
+.contact #trans {
+    width: 100%;
+    height: 100%;
+    background: url(/images/white70.png) repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+    display: none;
+}
+
+.contact .load {
+    width: 64px;
+    heighT: 64px;
+    position: absolute;
+    top: 50%;
+    margin-top: -32px;
+    right: 50%;
+    margin-right: -32px;
+    background: url(/images/load.gif) no-repeat center;
+    display: none;
+}
+
+.contact .message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 15px;
+    background: #aa0000;
+    border-radius: 2px;
+    color: #fff;
+    font: 11px IranSansLight;
+    display: none;
+    cursor: pointer;
+    opacity: 0.7;
+    max-width: 250px;
+}
+
+.clear30 {
+    margin-top: 30px;
+}
+
+.contact .full_box {
+    width: 98%;
+    margin: 3px auto;
+    font-size: 12px;
+    box-sizing: border-box;
+    float: right;
+}
+
+.contact .have_float {
+    width: 47%;
+}
+
+.contact .left {
+    margin-right: 4%;
+}
+
+.contact .full_box label {
+    display: block;
+    margin: 4px 0 4px 0;
+    color: #555;
+}
+
+.contact .full_box label span {
+    font-size: 10px;
+    color: #aa0000;
+}
+
+.contact .full_box input, .contact .full_box select, .contact .full_box textarea {
+    height: 26px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    font: 12px IranSans;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    font: 12px IranSansLight;
+    color: #333;
+}
+
+.contact .full_box input:focus, .contact .full_box select:focus, .contact .full_box textarea:focus {
+    border: 1px solid #aaa;
+}
+
+.contact .full_box textarea {
+    height: 110px;
+    resize: none;
+}
+
+.contact .margin20 {
+    margin-top: 20px;
+}
+
+.contact .full_box input.submit {
+    width: auto;
+    height: 34px;
+    background: #2e6971;
+    padding: 0 20px;
+    float: left;
+    border-radius: 3px;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.contact .full_box input.submit:hover {
+    background: #62c3d0
+}
+
+input.ltr {
+    direction: ltr;
+    font: 15px Arial;
+}
