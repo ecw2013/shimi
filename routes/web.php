@@ -18,5 +18,8 @@ Route::post('contact-us', 'ContentController@storeContactUs')->name('contact-us'
 // Admin routes
 Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('home', 'AdminController@home')->name('home');
+    Route::resource('product', 'ProductController');
+    Route::resource('news', 'NewsController');
+    Route::resource('contact', 'ContactController');
 });
 Auth::routes();

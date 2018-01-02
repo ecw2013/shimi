@@ -1,42 +1,70 @@
 @extends('layouts.admin.app')
 
-@section('body')
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'/>
-    <div id="login_body">
-        <div class="error" onclick="$(this).slideUp();"></div>
-        <img src="{{ asset('images/admin/bg.jpg') }}" class="myBackgroundImage" alt="mybackground"/>
-        <div id="login_box">
-            <div class="title">STM Lab Administrator Panel</div>
-            <form action="{{ route('login') }}" method="post">
-                {{ csrf_field() }}
-                <div class="full_box">
-                    <label for="email">Username:</label>
-                    <input class="ltr" type="text" name="email" id="email"/>
-                    <label for="password">Password:</label>
-                    <input class="ltr" type="password" name="password" id="password"/>
-                    <input type="submit" name="submit" class="submit" value="Login"/>
-                </div>
-                <div class="clear"></div>
-            </form>
-        </div>
-        @if ($errors->has('email'))
-            <script>
-                $(document).ready(function () {
-                    $(".error").html("{{ $errors->get('email')[0] }}").slideDown();
-                });
-            </script>
-        @endif
-    </div>
-@endsection
+@section('content')
+    test
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
 
-@section('script')
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".myBackgroundImage").cover({
-                backgroundPosition: "center",
-                checkWindowResize: true,
-                loadHidden: true
-            });
-        });
-    </script>
+                <div class="panel-body">
+                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                        {{ csrf_field() }}
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
+
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

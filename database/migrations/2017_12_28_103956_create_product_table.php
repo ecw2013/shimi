@@ -18,7 +18,7 @@ class CreateProductTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('picture_path')->nullable();
-            $table->string('text');
+            $table->text('text');
             $table->string('keywords')->nullable();
             $table->string('description')->nullable();
         });
