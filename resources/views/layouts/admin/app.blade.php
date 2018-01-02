@@ -37,16 +37,17 @@
                     {{ config('app.name', 'شرکت شیمیایی گسترش پرداز ماده') }}
                 </a>
             </div>
-
-            <div class="collapse navbar-collapse pull-right" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ route('admin.contact.index') }}">تماس ها</a></li>
-                    <li><a href="{{ route('admin.news.index') }}">اخبار </a></li>
-                    <li><a href="{{ route('admin.product.index') }}">محصولات </a></li>
-                    <li><a href="{{ route('admin.home') }}">صفحه اصلی</a></li>
-                </ul>
-            </div>
+            @auth
+                <div class="collapse navbar-collapse pull-right" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ route('admin.contact.index') }}">تماس ها</a></li>
+                        <li><a href="{{ route('admin.news.index') }}">اخبار </a></li>
+                        <li><a href="{{ route('admin.product.index') }}">محصولات </a></li>
+                        <li><a href="{{ route('admin.home') }}">صفحه اصلی</a></li>
+                    </ul>
+                </div>
+            @endauth
             <div class="collapse navbar-collapse pull-left">
 
                 <!-- Right Side Of Navbar -->
@@ -54,7 +55,6 @@
                     <!-- Authentication Links -->
                     @guest
                         <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
