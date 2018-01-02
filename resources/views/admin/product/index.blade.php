@@ -6,8 +6,8 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <span>لیست محصولات</span>
-                        <span class="pull-right">
+                        <span class="pull-right" style="font-weight: bolder; font-size: 20px;">لیست محصولات</span>
+                        <span>
                             <a href="{{ route("admin.product.create") }}" class="btn btn-sm btn-success">
                                 <span class="glyphicon glyphicon-plus"></span>
                             </a>
@@ -16,7 +16,7 @@
                     </div>
                     <div class="panel-body">
                         @foreach($products as $product)
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 pull-right">
                                 <div class="panel panel-default" style="height: 400px; direction: rtl">
                                     <div class="panel-body">
                                         <div style="height: 260px">
