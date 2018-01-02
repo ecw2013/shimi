@@ -13,7 +13,7 @@ class NewsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class NewsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|max:255',
+            'picture_path' => 'nullable|image',
+            'text' => 'required|max:65535',
+            'keywords' => 'nullable|max:255',
+            'description' => 'nullable|max:255',
         ];
     }
 }

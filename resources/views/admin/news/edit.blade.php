@@ -5,20 +5,21 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">افزودن محصول</div>
+                    <div class="panel-heading">ویرایش خبر</div>
                     <div class="panel-body">
                         <form class="form-horizontal"
                               method="post"
-                              action="{{ route("admin.product.store") }}"
+                              action="{{ route("admin.news.update", ['news' => $news]) }}"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
+                            {{ method_field('PUT') }}
                             <div class="form-group">
                                 <div class="col-sm-10 col-sm-push-1">
                                     <input class="form-control"
                                            id="title"
                                            name="title"
                                            placeholder="نام محصول"
-                                           value="{{ old('title') }}">
+                                           value="{{ old('title', $news->title) }}">
                                 </div>
                                 <label for="title" class="col-sm-2 control-label hidden-xs">نام محصول</label>
                             </div>
@@ -26,7 +27,7 @@
                                 <div class="col-sm-10 col-sm-push-1">
                                     <textarea name="text"
                                               class="form-control"
-                                              id="text" rows="5">{{ old('text') }}</textarea>
+                                              id="text" rows="5">{{ old('text', $news->text) }}</textarea>
                                 </div>
                                 <label for="text" class="col-sm-2 control-label hidden-xs">متن</label>
                             </div>
@@ -36,7 +37,7 @@
                                            id="keywords"
                                            name="keywords"
                                            placeholder="کلمات کلیدی"
-                                    value="{{ old('keywords') }}">
+                                    value="{{ old('keywords', $news->keywords) }}">
                                 </div>
                                 <label for="keywords" class="col-sm-2 control-label hidden-xs">کلمات کلیدی</label>
                             </div>
@@ -46,7 +47,7 @@
                                            id="description"
                                            name="description"
                                            placeholder="توضیحات"
-                                           value="{{ old('description') }}">
+                                           value="{{ old('description', $news->description) }}">
                                 </div>
                                 <label for="description" class="col-sm-2 control-label hidden-xs">توضیحات</label>
                             </div>
@@ -59,9 +60,14 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-default">ذخیره</button>
-                                    <a href="{{ back()->getTargetUrl() }}" class="btn btn-danger">انصراف</a>
+                                    <a href="{{ back()->getTargetUrl() }}" class="btn btn-warning">انصراف</a>
                                 </div>
                             </div>
+                        </form>
+                        <form action="{{ route('admin.news.destroy', ['news'=> $news]) }}" method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button type="submit" class="btn btn-danger">حذف</button>
                         </form>
                     </div>
                 </div>

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">افزودن پروژه</div>
+                    <div class="panel-heading">ویرایش پروژه</div>
                     <div class="panel-body">
                         <form class="form-horizontal"
                               method="post"
@@ -60,9 +60,14 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-default">ذخیره</button>
-                                    <a href="{{ back()->getTargetUrl() }}" class="btn btn-danger">انصراف</a>
+                                    <a href="{{ back()->getTargetUrl() }}" class="btn btn-warning">انصراف</a>
                                 </div>
                             </div>
+                        </form>
+                        <form action="{{ route('admin.product.destroy', ['product'=> $product]) }}" method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button type="submit" class="btn btn-danger">حذف</button>
                         </form>
                     </div>
                 </div>

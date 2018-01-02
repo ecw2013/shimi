@@ -10,7 +10,7 @@
         @foreach($newses as $index => $news)
             <a href="{{ route('news.show', ['news' => $news ]) }}"
                class="blog_boxes {{ $index % 2 == 0 ? '' : 'anti_blog_boxes' }}">
-                <img src="{{ asset($news->picture_path) }}" alt="Picture path"/>
+                <img src="{{ asset('files/' . $news->picture_path ) }}" alt="Picture path"/>
                 <div class="readall_black70">مشاهده بیشتر ...</div>
                 <div class="title">{{ $news->title }}</div>
             </a>

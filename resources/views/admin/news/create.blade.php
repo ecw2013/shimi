@@ -5,11 +5,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">افزودن محصول</div>
+                    <div class="panel-heading">افزودن خبر</div>
                     <div class="panel-body">
                         <form class="form-horizontal"
                               method="post"
-                              action="{{ route("admin.product.store") }}"
+                              action="{{ route("admin.news.store") }}"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
@@ -17,10 +17,10 @@
                                     <input class="form-control"
                                            id="title"
                                            name="title"
-                                           placeholder="نام محصول"
+                                           placeholder="نام خبر"
                                            value="{{ old('title') }}">
                                 </div>
-                                <label for="title" class="col-sm-2 control-label hidden-xs">نام محصول</label>
+                                <label for="title" class="col-sm-2 control-label hidden-xs">نام خبر</label>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-10 col-sm-push-1">

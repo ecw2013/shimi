@@ -11,7 +11,7 @@
         @foreach($products as $index => $product)
             <a href="{{ route('product.show', ['product' => $product ]) }}"
                class="blog_boxes {{ $index % 2 == 0 ? '' : 'anti_blog_boxes' }}">
-                <img src="{{ asset($product->picture_path) }}" alt="Picture path"/>
+                <img src="{{ asset('files/' . $product->picture_path ) }}" alt="Picture path"/>
                 <div class="readall_black70">مشاهده بیشتر ...</div>
                 <div class="title">{{ $product->title }}</div>
             </a>
