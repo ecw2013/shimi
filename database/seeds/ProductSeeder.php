@@ -14,7 +14,7 @@ class ProductSeeder extends Seeder
     {
         Product::query()->create([
             'title' => '1-Methoxy-2-propanol',
-            'picture_path' => 'files/images/product.jpg',
+            'picture_path' => 'products/product.jpg',
             'text'=>'1-Methoxy-2-propanol
 65692
 5ML
@@ -25,7 +25,7 @@ FLUKA',
 
         Product::query()->create([
             'title' => '1-Methoxy-2-propanol',
-            'picture_path' => 'files/images/product.jpg',
+            'picture_path' => 'products/product.jpg',
             'text'=>'1-Methoxy-2-propanol
 65692
 5ML
